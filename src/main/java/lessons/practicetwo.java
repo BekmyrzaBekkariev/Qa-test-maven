@@ -23,8 +23,8 @@ public class practicetwo {
         // новый метод
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        WebElement element = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("123")));
+//        WebElement element = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(10))
+//                .until(ExpectedConditions.presenceOfElementLocated(By.id("123")));
 
 
 

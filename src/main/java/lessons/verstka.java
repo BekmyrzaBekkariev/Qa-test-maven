@@ -1,27 +1,27 @@
 package lessons;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.time.Duration;
-
-public class practicethree {
+public class verstka {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "/home/bekmyrza/Downloads/chromedriver-linux64/chromedriver");
         WebDriver driver = new ChromeDriver();
-
         driver.manage().window().maximize();
+        driver.get("https://google.com");
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        // переменная
 
-        driver.get("https://www.avito.ru/catalog/auto-ASgBAgICAUTQvA7~m9EB");
-
-        WebElement element = driver.findElement(By.xpath(""));
-
-
+        WebElement accept = driver.findElement(By.xpath("//*[@id='W0wltc']/div"));
+        accept.click();
+        WebElement input = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
+        input.sendKeys("google");
+        input.sendKeys(Keys.ENTER);
 
 
     }
 }
+
